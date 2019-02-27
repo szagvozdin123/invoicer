@@ -59,3 +59,7 @@ jobs:
                 docker login -u ${DOCKER_USER} -p ${DOCKER_PASS};
                 docker push ${DOCKER_REPO}/${CIRCLE_PROJECT_REPONAME};
             fi
+  test:
+  post:
+ 
+      bash <(curl -s https://blackducksoftware.github.io/hub-detect/hub-detect.sh) --blackduck.hub.url="https://hubeval03.blackducksoftware.com" --blackduck.api.token=Nzk0NzBjYjgtMWVkZS00ODA2LThjN2ItMjA3YjdmYjJhM2JhOjRiYTMxNjZlLTdiNDYtNGZkZS1hNTYzLTNiZDJkNDYzYTk1YQ==
